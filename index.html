@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Formulario</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        <h1 id="enviado" style="display: none;">
+            Hemos  recibido  sus  datos,  pronto  nos estaremos comunicando con usted.
+        </h1>
+        <form id="formulario" method="post">
+        <ul>
+            <li>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" maxlength="15" placeholder="Nombre" required>
+            </li>
+            <li>
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" maxlength="30" placeholder="Apellidos" required>
+            </li>
+            <li>
+                <label for="rut">RUT</label>
+                <input type="text" id="rut" maxlength="8" placeholder="12345678" required> -
+                <input type="text" id="guion" maxlength="1" size="1" placeholder="1" required>
+            </li>
+            <li>
+                <label for="mail">Correo Electrónico</label>
+                <input type="email" id="mail" maxlength="30" placeholder="correo@mail.com" required>
+            </li>
+            <li>
+                <label for="telefono">Teléfono Movil</label>
+                <input type="number" id="telefono" min="100000000" max="999999999" placeholder="912345678" required>
+            </li>
+            <li>
+                <p>Seleccione 1 o más lenguajes de su interés</p>
+                <label id="caja"><input type="checkbox" name="leng">Python</label>
+                <label id="caja"><input type="checkbox" name="leng">TypeScript</label>
+                <label id="caja"><input type="checkbox" name="leng">C++</label>
+                <label id="caja"><input type="checkbox" name="leng">C#</label>
+                <label id="caja"><input type="checkbox" name="leng">PHP</label>
+                <label id="caja"><input type="checkbox" name="leng">Java</label>
+                <label id="caja"><input type="checkbox" name="leng">R</label>
+                <label id="caja"><input type="checkbox" name="leng">Groovy</label>
+                <label id="caja"><input type="checkbox" name="leng">Go</label>
+                <label id="caja"><input type="checkbox" name="leng">Swift</label>
+                <label id="caja"><input type="checkbox" name="leng">Kotlin</label>
+            </li>
+            <li>
+                <p>Nivel de experiencia en programación:</p>
+                <input type="radio" name="nivel" value="bajo" required> Bajo<br>
+                <input type="radio" name="nivel" value="medio"> Medio<br>
+                <input type="radio" name="nivel" value="alto"> Alto
+            </li>
+            <li>
+                <p>Nivel de conocimiento en:</p>
+                <label for="nivel">Python</label>
+                <input type="range" id="nivel" required><br>
+                <label for="nivel">Java</label>
+                <input type="range" id="nivel" required><br>
+                <label for="nivel">C++</label>
+                <input type="range" id="nivel" required><br>
+            </li>
+            <li>
+                <p>¿Cual de los siguientes cursos le ha tomado mayor dificultad? </p>
+                <label id="caja"><input type="checkbox" name="leng">Estructura de Datos</label>
+                <label id="caja"><input type="checkbox" name="leng">Inteligencia Artificial</label>
+                <label id="caja"><input type="checkbox" name="leng">Interacción Humano-Computador
+                </label>
+                <label id="caja"><input type="checkbox" name="leng">Sistemas Operativos</label>
+                <label id="caja"><input type="checkbox" name="leng">Otro</label>
+                <textarea id="descripcion" maxlength="300" placeholder="Curso"></textarea>
+            </li>
+            <li>
+                <p>Queremos conocer su opinión sobre la escuela</p><br>   
+                <textarea id="descripcion" maxlength="300" placeholder="Descripción" required></textarea>
+            </li>
+
+            <li>
+                <button type="submit" id="submit">Enviar</button>
+                <!-- <input type="reset" value="Limpiar datos"> -->
+                <button type="button" onclick="limpiarDatos()">Cancelar</button>
+            </li>
+            <p id="mensaje" style="display: none;"></p>
+        </ul>
+        </form>
+        <script src="js/inicio.js" async defer></script>
+    </body>
+</html>
